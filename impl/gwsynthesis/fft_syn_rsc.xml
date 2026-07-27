@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="uart_controller" T_Register="360(0)" T_Alu="126(0)" T_Lut="621(0)" T_MULT18X18="4(0)" T_MULTADDALU18X18="3(0)" T_Bsram="5(0)" T_Ssram="4(0)">
+ <SubModule name="uart_rx_module" Register="55" Lut="13" T_Register="97(55)" T_Alu="3(0)" T_Lut="50(13)" T_Ssram="4(0)">
+  <SubModule name="uart_u" Register="20" Lut="27" T_Register="20(20)" T_Lut="27(27)"/>
+  <SubModule name="fifo_u" Register="22" Alu="3" Lut="10" Ssram="4" T_Register="22(22)" T_Alu="3(3)" T_Lut="10(10)" T_Ssram="4(4)"/>
+ </SubModule>
+ <SubModule name="window_module" Register="47" Alu="7" Lut="138" MULT18X18="1" Bsram="2" T_Register="47(47)" T_Alu="7(7)" T_Lut="138(138)" T_MULT18X18="1(1)" T_Bsram="2(2)"/>
+ <SubModule name="fft_module" Register="2" Lut="60" T_Register="93(2)" T_Alu="79(0)" T_Lut="136(60)" T_MULTADDALU18X18="3(0)" T_Bsram="3(0)">
+  <SubModule name="u_ram" Bsram="2" T_Bsram="2(2)"/>
+  <SubModule name="u_loader" Register="8" Lut="13" T_Register="8(8)" T_Lut="13(13)"/>
+  <SubModule name="u_reader" Register="8" Lut="14" T_Register="8(8)" T_Lut="14(14)"/>
+  <SubModule name="u_calc" Register="75" Alu="6" Lut="43" MULTADDALU18X18="1" T_Register="75(75)" T_Alu="79(6)" T_Lut="49(43)" T_MULTADDALU18X18="3(1)" T_Bsram="1(0)">
+   <SubModule name="u_rom" Alu="5" Lut="6" Bsram="1" T_Alu="5(5)" T_Lut="6(6)" T_Bsram="1(1)"/>
+   <SubModule name="u_bfly" Alu="68" MULTADDALU18X18="2" T_Alu="68(68)" T_MULTADDALU18X18="2(2)"/>
+  </SubModule>
+ </SubModule>
+ <SubModule name="log_module" Register="70" Alu="37" Lut="240" MULT18X18="3" T_Register="70(70)" T_Alu="37(37)" T_Lut="240(240)" T_MULT18X18="3(3)"/>
+ <SubModule name="uart_module" Register="34" Lut="32" T_Register="53(34)" T_Lut="57(32)">
+  <SubModule name="u_txbyte" Register="19" Lut="25" T_Register="19(19)" T_Lut="25(25)"/>
+ </SubModule>
+</Module>

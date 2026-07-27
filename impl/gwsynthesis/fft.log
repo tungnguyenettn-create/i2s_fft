@@ -1,0 +1,63 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/axi_fft_top.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/axi_i2s.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/axi_output.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/axi_uart_tx.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/axi_window.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/butterfly.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/calc_fsm.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/controller.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/dual_port_ram.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/fifo.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/i2s.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/loader_fsm.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/reader_fsm.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/twiddle_rom.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/uart_tx_byte.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/uart_rx.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/axi_uart_rx.v'
+Analyzing Verilog file '/home/void-dreamers/fpga/fft/src/uart_controller.v'
+Compiling module 'uart_controller'("/home/void-dreamers/fpga/fft/src/uart_controller.v":1)
+Compiling module 'axi_uart_rx'("/home/void-dreamers/fpga/fft/src/axi_uart_rx.v":1)
+Compiling module 'uart_rx'("/home/void-dreamers/fpga/fft/src/uart_rx.v":1)
+Compiling module 'fifo'("/home/void-dreamers/fpga/fft/src/fifo.v":1)
+Extracting RAM for identifier 'fifo'("/home/void-dreamers/fpga/fft/src/fifo.v":14)
+Compiling module 'axi_window'("/home/void-dreamers/fpga/fft/src/axi_window.v":1)
+Extracting RAM for identifier 'memory_bank'("/home/void-dreamers/fpga/fft/src/axi_window.v":20)
+Extracting RAM for identifier 'rom_hamming'("/home/void-dreamers/fpga/fft/src/axi_window.v":95)
+Compiling module 'axi_fft_top'("/home/void-dreamers/fpga/fft/src/axi_fft_top.v":18)
+Compiling module 'dual_port_ram'("/home/void-dreamers/fpga/fft/src/dual_port_ram.v":7)
+Extracting RAM for identifier 'ram_re'("/home/void-dreamers/fpga/fft/src/dual_port_ram.v":31)
+Extracting RAM for identifier 'ram_im'("/home/void-dreamers/fpga/fft/src/dual_port_ram.v":32)
+Compiling module 'loader_fsm'("/home/void-dreamers/fpga/fft/src/loader_fsm.v":16)
+Compiling module 'reader_fsm'("/home/void-dreamers/fpga/fft/src/reader_fsm.v":14)
+Compiling module 'calc_fsm'("/home/void-dreamers/fpga/fft/src/calc_fsm.v":10)
+Compiling module 'twiddle_rom'("/home/void-dreamers/fpga/fft/src/twiddle_rom.v":29)
+Extracting RAM for identifier 'rom_re'("/home/void-dreamers/fpga/fft/src/twiddle_rom.v":50)
+Extracting RAM for identifier 'rom_im'("/home/void-dreamers/fpga/fft/src/twiddle_rom.v":51)
+Compiling module 'butterfly'("/home/void-dreamers/fpga/fft/src/butterfly.v":10)
+Compiling module 'axi_output'("/home/void-dreamers/fpga/fft/src/axi_output.v":1)
+Extracting RAM for identifier 'log2_lut'("/home/void-dreamers/fpga/fft/src/axi_output.v":50)
+Compiling module 'axi_uart_tx'("/home/void-dreamers/fpga/fft/src/axi_uart_tx.v":9)
+Compiling module 'uart_tx_byte'("/home/void-dreamers/fpga/fft/src/uart_tx_byte.v":4)
+NOTE  (EX0101) : Current top module is "uart_controller"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "/home/void-dreamers/fpga/fft/impl/gwsynthesis/fft.vg" completed
+[100%] Generate report file "/home/void-dreamers/fpga/fft/impl/gwsynthesis/fft_syn.rpt.html" completed
+GowinSynthesis finish
