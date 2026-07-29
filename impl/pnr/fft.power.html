@@ -61,15 +61,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>/home/void-dreamers/fpga/fft/impl/gwsynthesis/fft.vg</td>
+<td>/home/mpec-lab/Tung/i2s_fft/impl/gwsynthesis/fft.vg</td>
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>/home/void-dreamers/fpga/fft/src/fft.cst</td>
+<td>/home/mpec-lab/Tung/i2s_fft/src/fft.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
-<td>/home/void-dreamers/fpga/fft/src/tangnano9k.sdc</td>
+<td>/home/mpec-lab/Tung/i2s_fft/src/tangnano9k.sdc</td>
 </tr>
 <tr>
 <td class="label">Tool Version</td>
@@ -89,7 +89,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Fri Jul 24 09:53:04 2026
+<td>Tue Jul 28 13:11:45 2026
 </td>
 </tr>
 <tr>
@@ -161,7 +161,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <table class="summary_table">
 <tr>
 <td class="label">Total Power (mW)</td>
-<td>30.784</td>
+<td>26.782</td>
 </tr>
 <tr>
 <td class="label">Quiescent Power (mW)</td>
@@ -169,7 +169,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Dynamic Power (mW)</td>
-<td>4.242</td>
+<td>0.240</td>
 </tr>
 <tr>
 <td class="label">Psram Power (mW)</td>
@@ -180,7 +180,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <table class="summary_table">
 <tr>
 <td class="label">Junction Temperature</td>
-<td>25.627</td>
+<td>25.541</td>
 </tr>
 <tr>
 <td class="label">Theta JA</td>
@@ -188,7 +188,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Max Allowed Ambient Temperature</td>
-<td>84.373</td>
+<td>84.459</td>
 </tr>
 </table>
 <h2><a name="Supply_Summary">Supply Information:</a></h2>
@@ -203,9 +203,9 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>VCC</td>
 <td>1.200</td>
-<td>3.373</td>
+<td>0.038</td>
 <td>3.501</td>
-<td>8.248</td>
+<td>4.246</td>
 </tr>
 <tr>
 <td>VCCX</td>
@@ -240,27 +240,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>Logic</td>
-<td>0.126</td>
+<td>0.009</td>
 <td>NA</td>
-<td>3.372</td>
+<td>3.375</td>
 </tr>
 <tr>
 <td>IO</td>
 <td>6.156
 <td>5.926
 <td>9.281
-</tr>
-<tr>
-<td>BSRAM</td>
-<td>3.336
-<td>NA</td>
-<td>NA</td>
-</tr>
-<tr>
-<td>DSP</td>
-<td>0.547
-<td>NA</td>
-<td>1.267
 </tr>
 </table>
 <h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
@@ -271,65 +259,29 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <th class="label">Block Dynamic Power(mW)</th>
 </tr>
 <tr>
-<td>uart_controller</td>
-<td>4.009</td>
-<td>4.009(4.009)</td>
+<td>uart_check</td>
+<td>0.009</td>
+<td>0.009(0.009)</td>
 <tr>
-<td>uart_controller/fft_module/</td>
-<td>1.241</td>
-<td>1.241(1.236)</td>
+<td>uart_check/uart_rx/</td>
+<td>0.005</td>
+<td>0.005(0.004)</td>
 <tr>
-<td>uart_controller/fft_module/u_calc/</td>
-<td>0.153</td>
-<td>0.153(0.144)</td>
-<tr>
-<td>uart_controller/fft_module/u_calc/u_bfly/</td>
-<td>0.036</td>
-<td>0.036(0.000)</td>
-<tr>
-<td>uart_controller/fft_module/u_calc/u_rom/</td>
-<td>0.108</td>
-<td>0.108(0.000)</td>
-<tr>
-<td>uart_controller/fft_module/u_loader/</td>
-<td>0.001</td>
-<td>0.001(0.000)</td>
-<tr>
-<td>uart_controller/fft_module/u_ram/</td>
-<td>1.081</td>
-<td>1.081(0.000)</td>
-<tr>
-<td>uart_controller/fft_module/u_reader/</td>
-<td>0.001</td>
-<td>0.001(0.000)</td>
-<tr>
-<td>uart_controller/log_module/</td>
-<td>0.295</td>
-<td>0.295(0.000)</td>
-<tr>
-<td>uart_controller/uart_module/</td>
-<td>0.006</td>
-<td>0.006(0.002)</td>
-<tr>
-<td>uart_controller/uart_module/u_txbyte/</td>
+<td>uart_check/uart_rx/fifo_u/</td>
 <td>0.002</td>
 <td>0.002(0.000)</td>
 <tr>
-<td>uart_controller/uart_rx_module/</td>
-<td>0.009</td>
-<td>0.009(0.006)</td>
+<td>uart_check/uart_rx/uart_u/</td>
+<td>0.002</td>
+<td>0.002(0.000)</td>
 <tr>
-<td>uart_controller/uart_rx_module/fifo_u/</td>
+<td>uart_check/uart_tx/</td>
 <td>0.004</td>
 <td>0.004(0.000)</td>
 <tr>
-<td>uart_controller/uart_rx_module/uart_u/</td>
-<td>0.003</td>
-<td>0.003(0.000)</td>
-<tr>
-<td>uart_controller/window_module/</td>
-<td>2.458</td>
-<td>2.458(0.000)</td>
+<td>uart_check/uart_tx/u_txbyte/</td>
+<td>0.000</td>
+<td>0.000(0.000)</td>
 </table>
 <h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
 <table class="detail_table">
@@ -341,12 +293,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>clk</td>
 <td>27.000</td>
-<td>4.011</td>
-</tr>
-<tr>
-<td>NO CLOCK DOMAIN</td>
-<td>0.000</td>
-<td>0.000</td>
+<td>0.009</td>
 </tr>
 </table>
 </div><!-- content -->

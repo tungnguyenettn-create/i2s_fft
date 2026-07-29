@@ -1,9 +1,9 @@
--d /home/void-dreamers/fpga/fft/impl/gwsynthesis/fft.vg
+-d /home/mpec-lab/Tung/i2s_fft/impl/gwsynthesis/fft.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
--cst /home/void-dreamers/fpga/fft/src/fft.cst
--cfg /home/void-dreamers/fpga/fft/impl/pnr/device.cfg
--sdc /home/void-dreamers/fpga/fft/src/tangnano9k.sdc
+-cst /home/mpec-lab/Tung/i2s_fft/src/fft.cst
+-cfg /home/mpec-lab/Tung/i2s_fft/impl/pnr/device.cfg
+-sdc /home/mpec-lab/Tung/i2s_fft/src/tangnano9k.sdc
 -bit
 -tr
 -ph

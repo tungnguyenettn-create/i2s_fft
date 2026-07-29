@@ -1,99 +1,99 @@
 [
  {
-  "InstFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+  "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
   "InstLine" : 1,
   "InstName" : "controller",
-  "ModuleFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+  "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
   "ModuleLine" : 1,
   "ModuleName" : "controller",
   "SubInsts" : [
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
     "InstLine" : 17,
     "InstName" : "i2s_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_i2s.v",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_i2s.v",
     "ModuleLine" : 1,
     "ModuleName" : "axi_i2s",
     "SubInsts" : [
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_i2s.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_i2s.v",
       "InstLine" : 18,
       "InstName" : "i2s_u",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/i2s.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/i2s.v",
       "ModuleLine" : 1,
       "ModuleName" : "i2s"
      },
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_i2s.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_i2s.v",
       "InstLine" : 36,
       "InstName" : "fifo_u",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/fifo.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/fifo.v",
       "ModuleLine" : 1,
       "ModuleName" : "fifo"
      }
     ]
    },
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
     "InstLine" : 31,
     "InstName" : "window_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_window.v",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_window.v",
     "ModuleLine" : 1,
     "ModuleName" : "axi_window"
    },
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
     "InstLine" : 47,
     "InstName" : "fft_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_fft_top.v",
     "ModuleLine" : 18,
     "ModuleName" : "axi_fft_top",
     "SubInsts" : [
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_fft_top.v",
       "InstLine" : 79,
       "InstName" : "u_ram",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/dual_port_ram.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/dual_port_ram.v",
       "ModuleLine" : 7,
       "ModuleName" : "dual_port_ram"
      },
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_fft_top.v",
       "InstLine" : 92,
       "InstName" : "u_loader",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/loader_fsm.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/loader_fsm.v",
       "ModuleLine" : 16,
       "ModuleName" : "loader_fsm"
      },
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_fft_top.v",
       "InstLine" : 101,
       "InstName" : "u_reader",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/reader_fsm.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/reader_fsm.v",
       "ModuleLine" : 14,
       "ModuleName" : "reader_fsm"
      },
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_fft_top.v",
       "InstLine" : 112,
       "InstName" : "u_calc",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/calc_fsm.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/calc_fsm.v",
       "ModuleLine" : 10,
       "ModuleName" : "calc_fsm",
       "SubInsts" : [
        {
-        "InstFile" : "/home/void-dreamers/fpga/fft/src/calc_fsm.v",
+        "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/calc_fsm.v",
         "InstLine" : 109,
         "InstName" : "u_rom",
-        "ModuleFile" : "/home/void-dreamers/fpga/fft/src/twiddle_rom.v",
+        "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/twiddle_rom.v",
         "ModuleLine" : 29,
         "ModuleName" : "twiddle_rom"
        },
        {
-        "InstFile" : "/home/void-dreamers/fpga/fft/src/calc_fsm.v",
+        "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/calc_fsm.v",
         "InstLine" : 125,
         "InstName" : "u_bfly",
-        "ModuleFile" : "/home/void-dreamers/fpga/fft/src/butterfly.v",
+        "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/butterfly.v",
         "ModuleLine" : 10,
         "ModuleName" : "butterfly"
        }
@@ -102,26 +102,26 @@
     ]
    },
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
     "InstLine" : 66,
     "InstName" : "log_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_output.v",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_output.v",
     "ModuleLine" : 1,
     "ModuleName" : "axi_output"
    },
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/controller.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/controller.v",
     "InstLine" : 79,
     "InstName" : "uart_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_tx.v",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_tx.v",
     "ModuleLine" : 9,
     "ModuleName" : "axi_uart_tx",
     "SubInsts" : [
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_tx.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_tx.v",
       "InstLine" : 41,
       "InstName" : "u_txbyte",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/uart_tx_byte.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_tx_byte.v",
       "ModuleLine" : 4,
       "ModuleName" : "uart_tx_byte"
      }
@@ -130,128 +130,52 @@
   ]
  },
  {
-  "InstFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
+  "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_check.v",
   "InstLine" : 1,
-  "InstName" : "uart_controller",
-  "ModuleFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
+  "InstName" : "uart_check",
+  "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_check.v",
   "ModuleLine" : 1,
-  "ModuleName" : "uart_controller",
+  "ModuleName" : "uart_check",
   "SubInsts" : [
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
-    "InstLine" : 12,
-    "InstName" : "uart_rx_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_rx.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_check.v",
+    "InstLine" : 15,
+    "InstName" : "uart_rx",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_rx.v",
     "ModuleLine" : 1,
     "ModuleName" : "axi_uart_rx",
     "SubInsts" : [
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_rx.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_rx.v",
       "InstLine" : 16,
       "InstName" : "uart_u",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/uart_rx.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_rx.v",
       "ModuleLine" : 1,
       "ModuleName" : "uart_rx"
      },
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_rx.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_rx.v",
       "InstLine" : 33,
       "InstName" : "fifo_u",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/fifo.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/fifo.v",
       "ModuleLine" : 1,
       "ModuleName" : "fifo"
      }
     ]
    },
    {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
-    "InstLine" : 26,
-    "InstName" : "window_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_window.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "axi_window"
-   },
-   {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
-    "InstLine" : 42,
-    "InstName" : "fft_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
-    "ModuleLine" : 18,
-    "ModuleName" : "axi_fft_top",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
-      "InstLine" : 79,
-      "InstName" : "u_ram",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/dual_port_ram.v",
-      "ModuleLine" : 7,
-      "ModuleName" : "dual_port_ram"
-     },
-     {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
-      "InstLine" : 92,
-      "InstName" : "u_loader",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/loader_fsm.v",
-      "ModuleLine" : 16,
-      "ModuleName" : "loader_fsm"
-     },
-     {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
-      "InstLine" : 101,
-      "InstName" : "u_reader",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/reader_fsm.v",
-      "ModuleLine" : 14,
-      "ModuleName" : "reader_fsm"
-     },
-     {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_fft_top.v",
-      "InstLine" : 112,
-      "InstName" : "u_calc",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/calc_fsm.v",
-      "ModuleLine" : 10,
-      "ModuleName" : "calc_fsm",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/void-dreamers/fpga/fft/src/calc_fsm.v",
-        "InstLine" : 109,
-        "InstName" : "u_rom",
-        "ModuleFile" : "/home/void-dreamers/fpga/fft/src/twiddle_rom.v",
-        "ModuleLine" : 29,
-        "ModuleName" : "twiddle_rom"
-       },
-       {
-        "InstFile" : "/home/void-dreamers/fpga/fft/src/calc_fsm.v",
-        "InstLine" : 125,
-        "InstName" : "u_bfly",
-        "ModuleFile" : "/home/void-dreamers/fpga/fft/src/butterfly.v",
-        "ModuleLine" : 10,
-        "ModuleName" : "butterfly"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
-    "InstLine" : 61,
-    "InstName" : "log_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_output.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "axi_output"
-   },
-   {
-    "InstFile" : "/home/void-dreamers/fpga/fft/src/uart_controller.v",
-    "InstLine" : 74,
-    "InstName" : "uart_module",
-    "ModuleFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_tx.v",
+    "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_check.v",
+    "InstLine" : 28,
+    "InstName" : "uart_tx",
+    "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_tx.v",
     "ModuleLine" : 9,
     "ModuleName" : "axi_uart_tx",
     "SubInsts" : [
      {
-      "InstFile" : "/home/void-dreamers/fpga/fft/src/axi_uart_tx.v",
+      "InstFile" : "/home/mpec-lab/Tung/i2s_fft/src/axi_uart_tx.v",
       "InstLine" : 41,
       "InstName" : "u_txbyte",
-      "ModuleFile" : "/home/void-dreamers/fpga/fft/src/uart_tx_byte.v",
+      "ModuleFile" : "/home/mpec-lab/Tung/i2s_fft/src/uart_tx_byte.v",
       "ModuleLine" : 4,
       "ModuleName" : "uart_tx_byte"
      }

@@ -20,7 +20,8 @@
         <File path="src/loader_fsm.v" type="file.verilog" enable="1"/>
         <File path="src/reader_fsm.v" type="file.verilog" enable="1"/>
         <File path="src/twiddle_rom.v" type="file.verilog" enable="1"/>
-        <File path="src/uart_controller.v" type="file.verilog" enable="1"/>
+        <File path="src/uart_check.v" type="file.verilog" enable="1"/>
+        <File path="src/uart_controller.v" type="file.verilog" enable="0"/>
         <File path="src/uart_rx.v" type="file.verilog" enable="1"/>
         <File path="src/uart_tx_byte.v" type="file.verilog" enable="1"/>
         <File path="src/fft.cst" type="file.cst" enable="1"/>

@@ -55,24 +55,24 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>/home/void-dreamers/fpga/fft/src/axi_fft_top.v<br>
-/home/void-dreamers/fpga/fft/src/axi_i2s.v<br>
-/home/void-dreamers/fpga/fft/src/axi_output.v<br>
-/home/void-dreamers/fpga/fft/src/axi_uart_tx.v<br>
-/home/void-dreamers/fpga/fft/src/axi_window.v<br>
-/home/void-dreamers/fpga/fft/src/butterfly.v<br>
-/home/void-dreamers/fpga/fft/src/calc_fsm.v<br>
-/home/void-dreamers/fpga/fft/src/controller.v<br>
-/home/void-dreamers/fpga/fft/src/dual_port_ram.v<br>
-/home/void-dreamers/fpga/fft/src/fifo.v<br>
-/home/void-dreamers/fpga/fft/src/i2s.v<br>
-/home/void-dreamers/fpga/fft/src/loader_fsm.v<br>
-/home/void-dreamers/fpga/fft/src/reader_fsm.v<br>
-/home/void-dreamers/fpga/fft/src/twiddle_rom.v<br>
-/home/void-dreamers/fpga/fft/src/uart_tx_byte.v<br>
-/home/void-dreamers/fpga/fft/src/uart_rx.v<br>
-/home/void-dreamers/fpga/fft/src/axi_uart_rx.v<br>
-/home/void-dreamers/fpga/fft/src/uart_controller.v<br>
+<td>/home/mpec-lab/Tung/i2s_fft/src/axi_fft_top.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/axi_i2s.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/axi_output.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/axi_uart_rx.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/axi_uart_tx.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/axi_window.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/butterfly.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/calc_fsm.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/controller.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/dual_port_ram.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/fifo.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/i2s.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/loader_fsm.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/reader_fsm.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/twiddle_rom.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/uart_check.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/uart_rx.v<br>
+/home/mpec-lab/Tung/i2s_fft/src/uart_tx_byte.v<br>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Fri Jul 24 09:51:34 2026
+<td>Tue Jul 28 13:11:44 2026
 </td>
 </tr>
 <tr>
@@ -109,15 +109,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Top Level Module</td>
-<td>uart_controller</td>
+<td>uart_check</td>
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.893s, Elapsed time = 0h 0m 0.695s, Peak memory usage = 323.914MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.241s, Elapsed time = 0h 0m 0.232s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.081s, Elapsed time = 0h 0m 0.074s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.182s, Elapsed time = 0h 0m 0.176s, Peak memory usage = 323.914MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.155s, Elapsed time = 0h 0m 0.147s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0.084s, Elapsed time = 0h 0m 0.077s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.03s, Elapsed time = 0h 0m 0.025s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0.026s, Elapsed time = 0h 0m 0.021s, Peak memory usage = 323.914MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.366s, Elapsed time = 0h 0m 0.351s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.147s, Elapsed time = 0h 0m 0.138s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.158s, Elapsed time = 0h 0m 0.149s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 8s, Elapsed time = 0h 0m 8s, Peak memory usage = 323.914MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.826s, Elapsed time = 0h 0m 0.81s, Peak memory usage = 323.914MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.435s, Elapsed time = 0h 0m 0.425s, Peak memory usage = 323.914MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.039s, Elapsed time = 0h 0m 0.036s, Peak memory usage = 401.805MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.004s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 401.805MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 401.805MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 401.805MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.155s, Elapsed time = 0h 0m 0.154s, Peak memory usage = 425.902MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.047s, Elapsed time = 0h 0m 0.047s, Peak memory usage = 425.902MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 425.902MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 11s, Elapsed time = 0h 0m 11s, Peak memory usage = 323.914MB</td>
+<td>CPU time = 0h 0m 0.251s, Elapsed time = 0h 0m 0.247s, Peak memory usage = 425.902MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -145,27 +145,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label"><b>Register </b></td>
-<td>360</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspDFFE</td>
-<td>80</td>
+<td>37</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFS</td>
-<td>2</td>
+<td>1</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFSE</td>
-<td>3</td>
+<td>1</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFR</td>
-<td>34</td>
+<td>9</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFRE</td>
-<td>221</td>
+<td>14</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFP</td>
@@ -177,79 +173,39 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
-<td>10</td>
+<td>2</td>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>614</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspLUT1</td>
-<td>1</td>
+<td>51</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
-<td>80</td>
+<td>10</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>194</td>
+<td>17</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>339</td>
+<td>24</td>
 </tr>
 <tr>
 <td class="label"><b>ALU </b></td>
-<td>126</td>
+<td>8</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspALU</td>
-<td>126</td>
-</tr>
-<tr>
-<td class="label"><b>SSRAM </b></td>
-<td>4</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspRAM16SDP4</td>
-<td>4</td>
+<td>8</td>
 </tr>
 <tr>
 <td class="label"><b>INV </b></td>
-<td>7</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
-<td>7</td>
-</tr>
-<tr>
-<td class="label"><b>DSP </b></td>
-<td></td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspMULT18X18</td>
 <td>4</td>
 </tr>
 <tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspMULTADDALU18X18</td>
-<td>3</td>
-</tr>
-<tr>
-<td class="label"><b>BSRAM </b></td>
-<td>5</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspSDPB</td>
-<td>2</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspDPB</td>
-<td>2</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsppROM</td>
-<td>1</td>
+<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
+<td>4</td>
 </tr>
 </table>
 <h2><a name="utilization">Resource Utilization Summary</a></h2>
@@ -261,13 +217,13 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>771(621 LUT, 126 ALU, 4 RAM16) / 8640</td>
-<td>9%</td>
+<td>63(55 LUT, 8 ALU) / 8640</td>
+<td><1%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>360 / 6693</td>
-<td>6%</td>
+<td>37 / 6693</td>
+<td><1%</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as Latch</td>
@@ -276,13 +232,13 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as FF</td>
-<td>360 / 6693</td>
-<td>6%</td>
+<td>37 / 6693</td>
+<td><1%</td>
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>5 / 26</td>
-<td>20%</td>
+<td>0 / 26</td>
+<td>0%</td>
 </tr>
 </table>
 <h1><a name="timing">Timing</a></h1>
@@ -327,8 +283,8 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>1</td>
 <td>clk</td>
 <td>50.000(MHz)</td>
-<td>74.055(MHz)</td>
-<td>8</td>
+<td>126.130(MHz)</td>
+<td>4</td>
 <td>TOP</td>
 </tr>
 </table>
@@ -338,23 +294,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>6.497</td>
+<td>12.072</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>14.186</td>
+<td>8.254</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>20.683</td>
+<td>20.326</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>fft_module/u_calc/stage_1_s4</td>
+<td>uart_rx/uart_u/counter_1_s3</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s</td>
+<td>uart_rx/uart_u/counter_2_s3</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
@@ -396,7 +352,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -405,15 +361,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_calc/stage_1_s4/CLK</td>
+<td>uart_rx/uart_u/counter_1_s3/CLK</td>
 </tr>
 <tr>
 <td>1.184</td>
 <td>0.458</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>18</td>
-<td>fft_module/u_calc/stage_1_s4/Q</td>
+<td>4</td>
+<td>uart_rx/uart_u/counter_1_s3/Q</td>
 </tr>
 <tr>
 <td>2.144</td>
@@ -421,15 +377,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/I1</td>
+<td>uart_rx/uart_u/n94_s14/I1</td>
 </tr>
 <tr>
 <td>3.243</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>6</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/F</td>
+<td>2</td>
+<td>uart_rx/uart_u/n94_s14/F</td>
 </tr>
 <tr>
 <td>4.203</td>
@@ -437,167 +393,39 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/I0</td>
+<td>uart_rx/uart_u/n95_s13/I1</td>
 </tr>
 <tr>
-<td>5.235</td>
-<td>1.032</td>
+<td>5.302</td>
+<td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/F</td>
+<td>1</td>
+<td>uart_rx/uart_u/n95_s13/F</td>
 </tr>
 <tr>
-<td>6.195</td>
+<td>6.262</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/k_tmp_3_s10/I1</td>
+<td>uart_rx/uart_u/n95_s12/I0</td>
 </tr>
 <tr>
 <td>7.294</td>
-<td>1.099</td>
+<td>1.032</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_3_s10/F</td>
+<td>1</td>
+<td>uart_rx/uart_u/n95_s12/F</td>
 </tr>
 <tr>
 <td>8.254</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
-<td>109</td>
-<td>fft_module/u_calc/k_tmp_0_s12/C[3]</td>
-</tr>
-<tr>
-<td>8.525</td>
-<td>0.271</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_0_s12/DOUT[0]</td>
-</tr>
-<tr>
-<td>9.485</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/I0</td>
-</tr>
-<tr>
-<td>10.443</td>
-<td>0.958</td>
-<td>tINS</td>
-<td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/COUT</td>
-</tr>
-<tr>
-<td>10.443</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/CIN</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/COUT</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/CIN</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/COUT</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/CIN</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/COUT</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/CIN</td>
-</tr>
-<tr>
-<td>10.671</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/COUT</td>
-</tr>
-<tr>
-<td>10.671</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_0_s/CIN</td>
-</tr>
-<tr>
-<td>11.234</td>
-<td>0.563</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_0_s/SUM</td>
-</tr>
-<tr>
-<td>12.194</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/addr_b_0_s5/I0</td>
-</tr>
-<tr>
-<td>13.226</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/addr_b_0_s5/F</td>
-</tr>
-<tr>
-<td>14.186</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s/ADA[4]</td>
+<td>uart_rx/uart_u/counter_2_s3/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -631,7 +459,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -640,15 +468,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s/CLKA</td>
+<td>uart_rx/uart_u/counter_2_s3/CLK</td>
 </tr>
 <tr>
-<td>20.683</td>
-<td>-0.043</td>
+<td>20.326</td>
+<td>-0.400</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s</td>
+<td>uart_rx/uart_u/counter_2_s3</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -663,12 +491,12 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>8</td>
+<td>4</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.282, 46.670%; route: 6.720, 49.925%; tC2Q: 0.458, 3.405%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 3.230, 42.905%; route: 3.840, 51.007%; tC2Q: 0.458, 6.088%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 </table>
@@ -678,23 +506,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>6.497</td>
+<td>12.282</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>14.186</td>
+<td>8.044</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>20.683</td>
+<td>20.326</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>fft_module/u_calc/stage_1_s4</td>
+<td>uart_tx/bin_count_1_s0</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s</td>
+<td>uart_tx/state_0_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
@@ -736,7 +564,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -745,15 +573,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_calc/stage_1_s4/CLK</td>
+<td>uart_tx/bin_count_1_s0/CLK</td>
 </tr>
 <tr>
 <td>1.184</td>
 <td>0.458</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>18</td>
-<td>fft_module/u_calc/stage_1_s4/Q</td>
+<td>2</td>
+<td>uart_tx/bin_count_1_s0/Q</td>
 </tr>
 <tr>
 <td>2.144</td>
@@ -761,15 +589,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/I1</td>
+<td>uart_tx/n62_s22/I1</td>
 </tr>
 <tr>
 <td>3.243</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>6</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/F</td>
+<td>1</td>
+<td>uart_tx/n62_s22/F</td>
 </tr>
 <tr>
 <td>4.203</td>
@@ -777,167 +605,39 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/I0</td>
+<td>uart_tx/n62_s21/I2</td>
 </tr>
 <tr>
-<td>5.235</td>
-<td>1.032</td>
+<td>5.025</td>
+<td>0.822</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/F</td>
+<td>3</td>
+<td>uart_tx/n62_s21/F</td>
 </tr>
 <tr>
-<td>6.195</td>
+<td>5.985</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/k_tmp_3_s10/I1</td>
+<td>uart_tx/n63_s20/I1</td>
 </tr>
 <tr>
-<td>7.294</td>
+<td>7.084</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_3_s10/F</td>
-</tr>
-<tr>
-<td>8.254</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>109</td>
-<td>fft_module/u_calc/k_tmp_0_s12/C[3]</td>
-</tr>
-<tr>
-<td>8.525</td>
-<td>0.271</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_0_s12/DOUT[0]</td>
-</tr>
-<tr>
-<td>9.485</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/I0</td>
-</tr>
-<tr>
-<td>10.443</td>
-<td>0.958</td>
-<td>tINS</td>
-<td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/COUT</td>
+<td>uart_tx/n63_s20/F</td>
 </tr>
 <tr>
-<td>10.443</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/CIN</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/COUT</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/CIN</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/COUT</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/CIN</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/COUT</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/CIN</td>
-</tr>
-<tr>
-<td>10.671</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/COUT</td>
-</tr>
-<tr>
-<td>10.671</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_0_s/CIN</td>
-</tr>
-<tr>
-<td>11.234</td>
-<td>0.563</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_0_s/SUM</td>
-</tr>
-<tr>
-<td>12.194</td>
+<td>8.044</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/addr_b_0_s5/I0</td>
-</tr>
-<tr>
-<td>13.226</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/addr_b_0_s5/F</td>
-</tr>
-<tr>
-<td>14.186</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s/ADA[4]</td>
+<td>uart_tx/state_0_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -971,7 +671,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -980,15 +680,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s/CLKA</td>
+<td>uart_tx/state_0_s1/CLK</td>
 </tr>
 <tr>
-<td>20.683</td>
-<td>-0.043</td>
+<td>20.326</td>
+<td>-0.400</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s</td>
+<td>uart_tx/state_0_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1003,12 +703,12 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>8</td>
+<td>4</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.282, 46.670%; route: 6.720, 49.925%; tC2Q: 0.458, 3.405%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 3.020, 41.266%; route: 3.840, 52.471%; tC2Q: 0.458, 6.263%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 </table>
@@ -1018,23 +718,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>6.554</td>
+<td>12.282</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>14.129</td>
+<td>8.044</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>20.683</td>
+<td>20.326</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>fft_module/u_calc/stage_1_s4</td>
+<td>uart_tx/bin_count_1_s0</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s</td>
+<td>uart_tx/state_1_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
@@ -1076,7 +776,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1085,15 +785,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_calc/stage_1_s4/CLK</td>
+<td>uart_tx/bin_count_1_s0/CLK</td>
 </tr>
 <tr>
 <td>1.184</td>
 <td>0.458</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>18</td>
-<td>fft_module/u_calc/stage_1_s4/Q</td>
+<td>2</td>
+<td>uart_tx/bin_count_1_s0/Q</td>
 </tr>
 <tr>
 <td>2.144</td>
@@ -1101,15 +801,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/I1</td>
+<td>uart_tx/n62_s22/I1</td>
 </tr>
 <tr>
 <td>3.243</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>6</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/F</td>
+<td>1</td>
+<td>uart_tx/n62_s22/F</td>
 </tr>
 <tr>
 <td>4.203</td>
@@ -1117,151 +817,39 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/I0</td>
+<td>uart_tx/n62_s21/I2</td>
 </tr>
 <tr>
-<td>5.235</td>
-<td>1.032</td>
+<td>5.025</td>
+<td>0.822</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/F</td>
+<td>3</td>
+<td>uart_tx/n62_s21/F</td>
 </tr>
 <tr>
-<td>6.195</td>
+<td>5.985</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/k_tmp_3_s10/I1</td>
+<td>uart_tx/n62_s20/I1</td>
 </tr>
 <tr>
-<td>7.294</td>
+<td>7.084</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_3_s10/F</td>
-</tr>
-<tr>
-<td>8.254</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>109</td>
-<td>fft_module/u_calc/k_tmp_0_s12/C[3]</td>
-</tr>
-<tr>
-<td>8.525</td>
-<td>0.271</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_0_s12/DOUT[0]</td>
-</tr>
-<tr>
-<td>9.485</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/I0</td>
-</tr>
-<tr>
-<td>10.443</td>
-<td>0.958</td>
-<td>tINS</td>
-<td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/COUT</td>
+<td>uart_tx/n62_s20/F</td>
 </tr>
 <tr>
-<td>10.443</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/CIN</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/COUT</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/CIN</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/COUT</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/CIN</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/COUT</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/CIN</td>
-</tr>
-<tr>
-<td>11.177</td>
-<td>0.563</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/SUM</td>
-</tr>
-<tr>
-<td>12.137</td>
+<td>8.044</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/addr_b_1_s4/I0</td>
-</tr>
-<tr>
-<td>13.169</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/addr_b_1_s4/F</td>
-</tr>
-<tr>
-<td>14.129</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s/ADA[5]</td>
+<td>uart_tx/state_1_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1295,7 +883,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1304,15 +892,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s/CLKA</td>
+<td>uart_tx/state_1_s1/CLK</td>
 </tr>
 <tr>
-<td>20.683</td>
-<td>-0.043</td>
+<td>20.326</td>
+<td>-0.400</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s</td>
+<td>uart_tx/state_1_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1327,12 +915,12 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>8</td>
+<td>4</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.225, 46.443%; route: 6.720, 50.137%; tC2Q: 0.458, 3.420%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 3.020, 41.266%; route: 3.840, 52.471%; tC2Q: 0.458, 6.263%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 </table>
@@ -1342,23 +930,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>6.554</td>
+<td>12.349</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>14.129</td>
+<td>7.977</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>20.683</td>
+<td>20.326</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>fft_module/u_calc/stage_1_s4</td>
+<td>uart_rx/fifo_u/wr_ptr_0_s0</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s</td>
+<td>uart_rx/wstate_0_s0</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
@@ -1400,7 +988,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1409,15 +997,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_calc/stage_1_s4/CLK</td>
+<td>uart_rx/fifo_u/wr_ptr_0_s0/CLK</td>
 </tr>
 <tr>
 <td>1.184</td>
 <td>0.458</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>18</td>
-<td>fft_module/u_calc/stage_1_s4/Q</td>
+<td>5</td>
+<td>uart_rx/fifo_u/wr_ptr_0_s0/Q</td>
 </tr>
 <tr>
 <td>2.144</td>
@@ -1425,15 +1013,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/I1</td>
+<td>uart_rx/n122_s4/I1</td>
 </tr>
 <tr>
 <td>3.243</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>6</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/F</td>
+<td>2</td>
+<td>uart_rx/n122_s4/F</td>
 </tr>
 <tr>
 <td>4.203</td>
@@ -1441,7 +1029,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/I0</td>
+<td>uart_rx/n122_s3/I0</td>
 </tr>
 <tr>
 <td>5.235</td>
@@ -1449,7 +1037,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/F</td>
+<td>uart_rx/n122_s3/F</td>
 </tr>
 <tr>
 <td>6.195</td>
@@ -1457,135 +1045,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/k_tmp_3_s10/I1</td>
+<td>uart_rx/n117_s9/I2</td>
 </tr>
 <tr>
-<td>7.294</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_3_s10/F</td>
-</tr>
-<tr>
-<td>8.254</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>109</td>
-<td>fft_module/u_calc/k_tmp_0_s12/C[3]</td>
-</tr>
-<tr>
-<td>8.525</td>
-<td>0.271</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_0_s12/DOUT[0]</td>
-</tr>
-<tr>
-<td>9.485</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/I0</td>
-</tr>
-<tr>
-<td>10.443</td>
-<td>0.958</td>
+<td>7.017</td>
+<td>0.822</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/COUT</td>
+<td>uart_rx/n117_s9/F</td>
 </tr>
 <tr>
-<td>10.443</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/CIN</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/COUT</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/CIN</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/COUT</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/CIN</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/COUT</td>
-</tr>
-<tr>
-<td>10.614</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/CIN</td>
-</tr>
-<tr>
-<td>11.177</td>
-<td>0.563</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_1_s/SUM</td>
-</tr>
-<tr>
-<td>12.137</td>
+<td>7.977</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/addr_b_1_s4/I0</td>
-</tr>
-<tr>
-<td>13.169</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/addr_b_1_s4/F</td>
-</tr>
-<tr>
-<td>14.129</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s/ADA[5]</td>
+<td>uart_rx/wstate_0_s0/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1619,7 +1095,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1628,15 +1104,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s/CLKA</td>
+<td>uart_rx/wstate_0_s0/CLK</td>
 </tr>
 <tr>
-<td>20.683</td>
-<td>-0.043</td>
+<td>20.326</td>
+<td>-0.400</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_0_s</td>
+<td>uart_rx/wstate_0_s0</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1651,12 +1127,12 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>8</td>
+<td>4</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.225, 46.443%; route: 6.720, 50.137%; tC2Q: 0.458, 3.420%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.953, 40.724%; route: 3.840, 52.955%; tC2Q: 0.458, 6.321%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 </table>
@@ -1666,23 +1142,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>6.611</td>
+<td>12.545</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>14.072</td>
+<td>7.781</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>20.683</td>
+<td>20.326</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>fft_module/u_calc/stage_1_s4</td>
+<td>uart_rx/uart_u/bit_counter_1_s2</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s</td>
+<td>uart_rx/uart_u/state_0_s0</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
@@ -1724,7 +1200,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1733,15 +1209,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_calc/stage_1_s4/CLK</td>
+<td>uart_rx/uart_u/bit_counter_1_s2/CLK</td>
 </tr>
 <tr>
 <td>1.184</td>
 <td>0.458</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>18</td>
-<td>fft_module/u_calc/stage_1_s4/Q</td>
+<td>3</td>
+<td>uart_rx/uart_u/bit_counter_1_s2/Q</td>
 </tr>
 <tr>
 <td>2.144</td>
@@ -1749,15 +1225,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/I1</td>
+<td>uart_rx/uart_u/n106_s12/I1</td>
 </tr>
 <tr>
 <td>3.243</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>6</td>
-<td>fft_module/u_calc/u_rom/base_addr_4_s0/F</td>
+<td>1</td>
+<td>uart_rx/uart_u/n106_s12/F</td>
 </tr>
 <tr>
 <td>4.203</td>
@@ -1765,15 +1241,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/I0</td>
+<td>uart_rx/uart_u/n106_s11/I0</td>
 </tr>
 <tr>
 <td>5.235</td>
 <td>1.032</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/u_rom/base_addr_3_s1/F</td>
+<td>1</td>
+<td>uart_rx/uart_u/n106_s11/F</td>
 </tr>
 <tr>
 <td>6.195</td>
@@ -1781,119 +1257,23 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/k_tmp_3_s10/I1</td>
+<td>uart_rx/uart_u/n106_s10/I3</td>
 </tr>
 <tr>
-<td>7.294</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_3_s10/F</td>
-</tr>
-<tr>
-<td>8.254</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>109</td>
-<td>fft_module/u_calc/k_tmp_0_s12/C[3]</td>
-</tr>
-<tr>
-<td>8.525</td>
-<td>0.271</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/k_tmp_0_s12/DOUT[0]</td>
-</tr>
-<tr>
-<td>9.485</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/I0</td>
-</tr>
-<tr>
-<td>10.443</td>
-<td>0.958</td>
+<td>6.821</td>
+<td>0.626</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/u_calc/calc_addr_b_5_s/COUT</td>
+<td>uart_rx/uart_u/n106_s10/F</td>
 </tr>
 <tr>
-<td>10.443</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/CIN</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_4_s/COUT</td>
-</tr>
-<tr>
-<td>10.500</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/CIN</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.057</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_3_s/COUT</td>
-</tr>
-<tr>
-<td>10.557</td>
-<td>0.000</td>
-<td>tNET</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/CIN</td>
-</tr>
-<tr>
-<td>11.120</td>
-<td>0.563</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_calc/calc_addr_b_2_s/SUM</td>
-</tr>
-<tr>
-<td>12.080</td>
+<td>7.781</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>fft_module/addr_b_2_s4/I0</td>
-</tr>
-<tr>
-<td>13.112</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>fft_module/addr_b_2_s4/F</td>
-</tr>
-<tr>
-<td>14.072</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s/ADA[6]</td>
+<td>uart_rx/uart_u/state_0_s0/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1927,7 +1307,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>375</td>
+<td>37</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1936,15 +1316,15 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s/CLKA</td>
+<td>uart_rx/uart_u/state_0_s0/CLK</td>
 </tr>
 <tr>
-<td>20.683</td>
-<td>-0.043</td>
+<td>20.326</td>
+<td>-0.400</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>fft_module/u_ram/ram_re_ram_re_0_1_s</td>
+<td>uart_rx/uart_u/state_0_s0</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1959,12 +1339,12 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>8</td>
+<td>4</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.168, 46.214%; route: 6.720, 50.352%; tC2Q: 0.458, 3.434%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.757, 39.077%; route: 3.840, 54.427%; tC2Q: 0.458, 6.496%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 0.000%; route: 0.726, 100.000%</td></tr>
 </table>
