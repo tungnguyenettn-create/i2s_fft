@@ -2,7 +2,8 @@
 // Simple UART transmitter: one byte at a time, 8N1 framing.
 // ---------------------------------------------------------------
 module uart_tx_byte #(
-    parameter CLKS_PER_BIT = 9   // 27 MHz / 3 Mbit/s
+    parameter CLKS_PER_BIT = 9,   // 27 MHz / 3 Mbit/s
+    parameter COUNTER_LEN  = $clog2(CLKS_PER_BIT)
 )(
     input        clk,
     input        rst_n,
@@ -18,7 +19,7 @@ module uart_tx_byte #(
     localparam STOP  = 2'd3;
 
     reg [1:0] state;
-    reg [3:0] clk_cnt;
+    reg [COUNTER_LEN-1:0] clk_cnt;
     reg [2:0] bit_idx;
     reg [7:0] data_reg;
 

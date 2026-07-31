@@ -13,7 +13,9 @@ module axi_uart_rx #(
 	reg [15:0] audio_data; 
 	wire [7:0] byte_data; 
 
-	uart_rx uart_u (
+	uart_rx #(
+        CLKS_PER_BIT = CLKS_PER_BIT
+    ) uart_u (
 		.clk(clk), 
 		.rst_n(rst_n), 
 		.rx_data(rx_data), 
