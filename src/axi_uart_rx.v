@@ -14,7 +14,7 @@ module axi_uart_rx #(
 	wire [7:0] byte_data; 
 
 	uart_rx #(
-        CLKS_PER_BIT = CLKS_PER_BIT
+        .CLKS_PER_BIT(CLKS_PER_BIT)
     ) uart_u (
 		.clk(clk), 
 		.rst_n(rst_n), 
