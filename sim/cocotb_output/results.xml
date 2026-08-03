@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1785717137" />
+    <testcase name="test_axi_output_random" classname="test_axi_output" file="/home/void-dreamers/i2s_fft/sim/cocotb_output/test_axi_output.py" lineno="38" time="0.4149467945098877" sim_time_ns="44511.0" ratio_time="107269.17423852845" />
+  </testsuite>
+</testsuites>

@@ -9,7 +9,7 @@ module axi_output (
 
     output reg m_axis_tvalid,
     input  m_axis_tready,
-    output reg [15:0] m_axis_tdata,   // Q5.10 log2 magnitude (1 sign, 5 int, 10 frac)
+    output reg [15:0] m_axis_tdata,   // Q6.10 log2 magnitude (1 sign, 5 int, 10 frac)
     output reg m_axis_tlast
 );
 
@@ -18,13 +18,11 @@ module axi_output (
     wire signed [31:0] re_prod = re * re;
     wire signed [31:0] im_prod = im * im;
     
-    // Shifted to fit sums into 17 bits comfortably. 
-    // Kept unsigned to avoid the sign-extension bug!
-    wire [15:0] re_truncated = re_prod[30:15];
-    wire [15:0] im_truncated = im_prod[30:15];
-
-    reg [16:0] cap_prod;     // re_truncated + im_truncated, always >=0
-    reg [4:0]  int_part;     // leading-zero mapped integer exponent
+    
+    wire [30:0] re_truncated = re_prod[30:0]; //The first bit is unnecessary it can't be negative 
+    wire [30:0] im_truncated = im_prod[30:0];  
+    reg  [31:0] cap_prod;        // No truncation, there is no sign bit here, the first bit is 2 
+    reg signed  [5:0]  int_part;     // leading-zero mapped integer exponent
     reg        tlast_d;
 
     localparam IDLE = 3'd0;
@@ -37,14 +35,14 @@ module axi_output (
     wire shs = s_axis_tvalid && s_axis_tready;
 
     // --- Pipelined Fractional Part Registers ---
-    reg [16:0] norm_cap;
+    reg [31:0] norm_cap;
     reg [10:0] lut_y0;
     reg [10:0] lut_delta; 
     
     // Use the top 4 bits of the mantissa to index the LUT
-    wire [3:0]  lut_idx = norm_cap[15:12];
+    wire [3:0]  lut_idx = norm_cap[30:27];
     // Use the remaining 12 bits for linear interpolation
-    wire [11:0] lut_rem = norm_cap[11:0];
+    wire [11:0] lut_rem = norm_cap[26:15];
 
     // 17-entry LUT for log2(1.x) * 1024
     reg [10:0] log2_lut [0:16];
@@ -99,82 +97,146 @@ module axi_output (
 
                 SUM: begin
                     // Clamp to epsilon floor (1) to avoid log2(0) going to -infinity
-                    if (cap_prod == 17'd0) begin
-                        cap_prod <= 17'd1;
+                    if (cap_prod == 32'd0) begin
+                        cap_prod <= 32'd1;
                     end
                     state <= LOG;
                 end
 
                 LOG: begin
                     // Priority encoder & Barrel Shifter
-                    casex (cap_prod)
-                        17'b1_????_????_????_????: begin
-                            int_part <= 5'd16;
-                            norm_cap <= cap_prod; // No shift needed
+                    casez (cap_prod)
+                        32'b1???_????_????_????_????_????_????_????: begin
+                            int_part <= 6'sd1;
+                            norm_cap <= cap_prod; // Shift 0
                         end
-                        17'b0_1???_????_????_????: begin
-                            int_part <= 5'd15;
-                            norm_cap <= cap_prod << 5'd1;
+                        32'b01??_????_????_????_????_????_????_????: begin
+                            int_part <= 6'sd0;
+                            norm_cap <= cap_prod << 6'd1;
                         end
-                        17'b0_01??_????_????_????: begin
-                            int_part <= 5'd14;
-                            norm_cap <= cap_prod << 5'd2;
+                        32'b001?_????_????_????_????_????_????_????: begin
+                            int_part <= -6'sd1;
+                            norm_cap <= cap_prod << 6'd2;
                         end
-                        17'b0_001?_????_????_????: begin
-                            int_part <= 5'd13;
-                            norm_cap <= cap_prod << 5'd3;
+                        32'b0001_????_????_????_????_????_????_????: begin
+                            int_part <= -6'sd2;
+                            norm_cap <= cap_prod << 6'd3;
                         end
-                        17'b0_0001_????_????_????: begin
-                            int_part <= 5'd12;
-                            norm_cap <= cap_prod << 5'd4;
+                        32'b0000_1???_????_????_????_????_????_????: begin
+                            int_part <= -6'sd3;
+                            norm_cap <= cap_prod << 6'd4;
                         end
-                        17'b0_0000_1???_????_????: begin
-                            int_part <= 5'd11;
-                            norm_cap <= cap_prod << 5'd5;
+                        32'b0000_01??_????_????_????_????_????_????: begin
+                            int_part <= -6'sd4;
+                            norm_cap <= cap_prod << 6'd5;
                         end
-                        17'b0_0000_01??_????_????: begin
-                            int_part <= 5'd10;
-                            norm_cap <= cap_prod << 5'd6;
+                        32'b0000_001?_????_????_????_????_????_????: begin
+                            int_part <= -6'sd5;
+                            norm_cap <= cap_prod << 6'd6;
                         end
-                        17'b0_0000_001?_????_????: begin
-                            int_part <= 5'd9;
-                            norm_cap <= cap_prod << 5'd7;
+                        32'b0000_0001_????_????_????_????_????_????: begin
+                            int_part <= -6'sd6;
+                            norm_cap <= cap_prod << 6'd7;
                         end
-                        17'b0_0000_0001_????_????: begin
-                            int_part <= 5'd8;
-                            norm_cap <= cap_prod << 5'd8;
+                        32'b0000_0000_1???_????_????_????_????_????: begin
+                            int_part <= -6'sd7;
+                            norm_cap <= cap_prod << 6'd8;
                         end
-                        17'b0_0000_0000_1???_????: begin
-                            int_part <= 5'd7;
-                            norm_cap <= cap_prod << 5'd9;
+                        32'b0000_0000_01??_????_????_????_????_????: begin
+                            int_part <= -6'sd8;
+                            norm_cap <= cap_prod << 6'd9;
                         end
-                        17'b0_0000_0000_01??_????: begin
-                            int_part <= 5'd6;
-                            norm_cap <= cap_prod << 5'd10;
+                        32'b0000_0000_001?_????_????_????_????_????: begin
+                            int_part <= -6'sd9;
+                            norm_cap <= cap_prod << 6'd10;
                         end
-                        17'b0_0000_0000_001?_????: begin
-                            int_part <= 5'd5;
-                            norm_cap <= cap_prod << 5'd11;
+                        32'b0000_0000_0001_????_????_????_????_????: begin
+                            int_part <= -6'sd10;
+                            norm_cap <= cap_prod << 6'd11;
                         end
-                        17'b0_0000_0000_0001_????: begin
-                            int_part <= 5'd4;
-                            norm_cap <= cap_prod << 5'd12;
+                        32'b0000_0000_0000_1???_????_????_????_????: begin
+                            int_part <= -6'sd11;
+                            norm_cap <= cap_prod << 6'd12;
                         end
-                        17'b0_0000_0000_0000_1???: begin
-                            int_part <= 5'd3;
-                            norm_cap <= cap_prod << 5'd13;
+                        32'b0000_0000_0000_01??_????_????_????_????: begin
+                            int_part <= -6'sd12;
+                            norm_cap <= cap_prod << 6'd13;
                         end
-                        17'b0_0000_0000_0000_01??: begin
-                            int_part <= 5'd2;
-                            norm_cap <= cap_prod << 5'd14;
+                        32'b0000_0000_0000_001?_????_????_????_????: begin
+                            int_part <= -6'sd13;
+                            norm_cap <= cap_prod << 6'd14;
                         end
-                        17'b0_0000_0000_0000_001?: begin
-                            int_part <= 5'd1;
-                            norm_cap <= cap_prod << 5'd15;
+                        32'b0000_0000_0000_0001_????_????_????_????: begin
+                            int_part <= -6'sd14;
+                            norm_cap <= cap_prod << 6'd15;
+                        end
+                        32'b0000_0000_0000_0000_1???_????_????_????: begin
+                            int_part <= -6'sd15;
+                            norm_cap <= cap_prod << 6'd16;
+                        end
+                        32'b0000_0000_0000_0000_01??_????_????_????: begin
+                            int_part <= -6'sd16;
+                            norm_cap <= cap_prod << 6'd17;
+                        end
+                        32'b0000_0000_0000_0000_001?_????_????_????: begin
+                            int_part <= -6'sd17;
+                            norm_cap <= cap_prod << 6'd18;
+                        end
+                        32'b0000_0000_0000_0000_0001_????_????_????: begin
+                            int_part <= -6'sd18;
+                            norm_cap <= cap_prod << 6'd19;
+                        end
+                        32'b0000_0000_0000_0000_0000_1???_????_????: begin
+                            int_part <= -6'sd19;
+                            norm_cap <= cap_prod << 6'd20;
+                        end
+                        32'b0000_0000_0000_0000_0000_01??_????_????: begin
+                            int_part <= -6'sd20;
+                            norm_cap <= cap_prod << 6'd21;
+                        end
+                        32'b0000_0000_0000_0000_0000_001?_????_????: begin
+                            int_part <= -6'sd21;
+                            norm_cap <= cap_prod << 6'd22;
+                        end
+                        32'b0000_0000_0000_0000_0000_0001_????_????: begin
+                            int_part <= -6'sd22;
+                            norm_cap <= cap_prod << 6'd23;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_1???_????: begin
+                            int_part <= -6'sd23;
+                            norm_cap <= cap_prod << 6'd24;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_01??_????: begin
+                            int_part <= -6'sd24;
+                            norm_cap <= cap_prod << 6'd25;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_001?_????: begin
+                            int_part <= -6'sd25;
+                            norm_cap <= cap_prod << 6'd26;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_0001_????: begin
+                            int_part <= -6'sd26;
+                            norm_cap <= cap_prod << 6'd27;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_0000_1???: begin
+                            int_part <= -6'sd27;
+                            norm_cap <= cap_prod << 6'd28;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_0000_01??: begin
+                            int_part <= -6'sd28;
+                            norm_cap <= cap_prod << 6'd29;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_0000_001?: begin
+                            int_part <= -6'sd29;
+                            norm_cap <= cap_prod << 6'd30;
+                        end
+                        32'b0000_0000_0000_0000_0000_0000_0000_0001: begin
+                            int_part <= -6'sd30;
+                            norm_cap <= cap_prod << 6'd31;
                         end
                         default: begin
-                            int_part <= 5'd0;
-                            norm_cap <= cap_prod << 5'd16; 
+                            int_part <= -6'sd31; // Zero case
+                            norm_cap <= 32'd0;
                         end
                     endcase
                     state <= INT; 
@@ -188,7 +250,7 @@ module axi_output (
                 end 
                 
                 OUT: begin
-                    m_axis_tdata  <= {1'b0, int_part, frac_part}; 
+                    m_axis_tdata  <= {int_part, frac_part}; 
                     m_axis_tlast  <= tlast_d;
                     m_axis_tvalid <= 1'b1;
                     
